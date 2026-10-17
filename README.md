@@ -2,6 +2,10 @@
 
 **An explainable website quality scanner that produces a report you can act on.** SiteSentry crawls a small part of a public website, checks baseline HTML accessibility and discoverability signals, and exports a self-contained HTML or JSON report.
 
+## Interactive browser demo
+
+Try the [live SiteSentry demo](https://damnsunnyy.github.io/SiteSentry/). Paste HTML, choose a built-in example, or open a local `.html` file to get an interactive audit and downloadable report. The browser demo analyzes the HTML you provide; it does not fetch arbitrary URLs. Use the Python CLI below to crawl an allowed public website. Browser analysis stays on your device.
+
 ## The idea
 
 A useful audit should tell you what it saw, why it flagged something, and how to improve it. SiteSentry keeps a small, transparent rule set instead of presenting an opaque score as a compliance certificate.

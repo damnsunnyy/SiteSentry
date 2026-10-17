@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101411" />
+  <meta name="description" content="Audit a local HTML page for common accessibility and discoverability issues. Private by design; your source stays in your browser." />
+  <title>SiteSentry — a calmer website audit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to audit</a>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar"><a href="#top" class="brand"><span>◉</span> SITE<span>SENTRY</span></a><span class="privacy"><i></i> PRIVATE BY DESIGN</span><a class="repo-link" href="https://github.com/damnsunnyy/SiteSentry" target="_blank" rel="noreferrer">PYTHON CLI ↗</a></header>
+  <main id="main">
+    <section class="hero" id="top"><div class="hero-copy"><p class="kicker">01 / HTML QUALITY LAB</p><h1>A clearer view<br />of your <em>site.</em></h1><p class="lede">Paste markup or open a local HTML file. Get direct, explainable checks for accessibility and discoverability—right here in your browser.</p><div class="trust"><span>NO UPLOAD</span><b>✳</b><span>NO TRACKING</span><b>✳</b><span>YOUR FILE STAYS LOCAL</span></div></div><div class="hero-ring" aria-hidden="true"><div class="orbit o1"></div><div class="orbit o2"></div><div class="score-orb"><b>◎</b><span>SCAN<br />LOCALLY</span></div><i class="signal s1">a11y</i><i class="signal s2">SEO</i><i class="signal s3">HTML</i></div></section>
+    <section class="tool" aria-labelledby="workspace-title"><div class="section-head"><div><p class="kicker">02 / YOUR WORKSPACE</p><h2 id="workspace-title">Bring a page.</h2></div><p>Choose a sample, paste its HTML, or select a file. SiteSentry analyzes the source you provide; it does not fetch websites from the browser.</p></div>
+      <div class="workspace"><div class="editor"><div class="editor-top"><label for="sample-select">START WITH</label><select id="sample-select"><option value="garden">Northstar Garden · needs a few fixes</option><option value="studio">Kindred Studio · good baseline</option></select><label class="upload" for="file-input">OPEN HTML FILE <span>↗</span></label><input id="file-input" type="file" accept="text/html,.html,.htm" /></div><label class="sr-only" for="html-input">Page HTML source to audit</label><textarea id="html-input" spellcheck="false" aria-describedby="editor-help"></textarea><div id="editor-help" class="editor-foot"><span>HTML SOURCE · LOCAL ONLY</span><span id="char-count">0 CHARS</span></div><button id="scan-button" class="scan-button"><span>RUN ACCESSIBILITY &amp; SEO CHECKS</span><b>↗</b></button><div id="status" class="status" aria-live="polite">Choose a sample or provide HTML to begin.</div></div>
+        <aside class="side-note"><div class="side-mark">◎</div><p class="kicker">SCAN BOUNDARIES</p><h3>Small, honest checks.</h3><p>This browser demo reads HTML in memory. For a bounded same-host crawl of a live public site, use the Python CLI.</p><a href="https://github.com/damnsunnyy/SiteSentry#quick-start" target="_blank" rel="noreferrer">CLI GUIDE ↗</a><div class="rule-list"><span><i></i> Document language</span><span><i></i> Titles &amp; descriptions</span><span><i></i> Headings &amp; landmarks</span><span><i></i> Images, links &amp; forms</span></div></aside>
+      </div>
+    </section>
+    <section class="results" id="results" hidden aria-live="polite"><div class="results-head"><div><p class="kicker">03 / SCAN RESULTS</p><h2 id="result-title">Page audit.</h2><p id="result-subtitle" class="muted"></p></div><div class="result-actions"><button id="download-json" class="quiet">DOWNLOAD JSON ↓</button><button id="download-html" class="quiet">SAVE REPORT ↗</button></div></div><div class="summary"><div class="score-card"><div id="score-ring" class="score-ring"><b id="score-value">—</b></div><div><span class="eyebrow">BASELINE SCORE</span><p>Starts at 100. Deductions are simple triage signals, not a compliance grade.</p></div></div><div class="metric critical"><span>CRITICAL</span><b id="critical-count">0</b></div><div class="metric warning"><span>WARNINGS</span><b id="warning-count">0</b></div><div class="metric notice"><span>NOTICES</span><b id="notice-count">0</b></div></div><div class="result-grid"><div><div class="results-title"><h3>Findings</h3><span id="finding-count" class="small-label"></span></div><div id="finding-list" class="finding-list"></div></div><aside class="page-preview"><div class="results-title"><h3>Source snapshot</h3><span class="small-label">PARSED IN BROWSER</span></div><div id="snapshot"></div></aside></div></section>
+    <footer><span>◉ SITESENTRY · BROWSER AUDIT</span><span>THE PYTHON CLI CRAWLS PUBLIC SITES <a href="https://github.com/damnsunnyy/SiteSentry">↗</a></span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
