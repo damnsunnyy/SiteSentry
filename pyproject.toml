@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sitesentry"
+version = "1.0.0"
+description = "Explainable accessibility and discoverability checks for public websites"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Shubham"}]
+keywords = ["accessibility", "seo", "website-audit", "crawler", "html"]
+classifiers = ["Environment :: Console", "Operating System :: OS Independent", "Programming Language :: Python :: 3"]
+dependencies = []
+
+[project.scripts]
+sitesentry = "sitesentry.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
