@@ -1,5 +1,7 @@
 # SiteSentry
 
+**Live demo:** [https://damnsunnyy.github.io/SiteSentry/](https://damnsunnyy.github.io/SiteSentry/)
+
 **An explainable website quality scanner that produces a report you can act on.** SiteSentry crawls a small part of a public website, checks baseline HTML accessibility and discoverability signals, and exports a self-contained HTML or JSON report.
 
 ## Interactive browser demo
